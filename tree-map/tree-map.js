@@ -28,10 +28,53 @@
   *  root1.value // still 1
   */
 
+// var Tree = function(value) {
+//   this.value = value;
+//   this.children = []; 
+// };
+
+// Tree.prototype.addChild = function(){
+//    var chaild = Tree(value);
+//   return this.children.push(chaild);
+//   // return this.children;
+// };
+// Tree.prototype.contains = function(target){
+  
+//     return  this.chaild.hasOwnProperty(target);
+//   // for(var i = 0 ; this.children.length; i ++){
+//   //   if(this.children[i] === target){
+
+//   //   }
+//   // }
+// };
+// Tree.prototype.traverses = function(){
+
+// }
+
+// var newTree = Tree(1);
+
 var Tree = function(value) {
-  this.value = value;
-  this.children = [];
+  var newtree = Object.create(treeMethod);
+  newtree.value = value;
+  newtree.children = []; 
+   return newtree;
 };
+
+var treeMethod = {};
+
+treeMethod.addChild = function(){
+   var chaild = Tree(value);
+  return this.children.push(chaild);
+  // return this.children;
+};
+treeMethod.contains = function(target){
+    return  this.children.hasOwnProperty(target);
+};
+treeMethod.traverses = function(){
+  // 
+}
+
+
 
 
 
